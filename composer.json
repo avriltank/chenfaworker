@@ -1,0 +1,35 @@
+{
+    "name": "avriltank/chenfaworker",
+    "description": "workerman extend for thinkphp",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\worker\\": "src"
+        }
+    },
+    "extra": {
+        "think":{
+            "services":[
+                "think\\worker\\Service"
+            ],
+            "config":{
+                "worker": "src/config/worker.php",
+                "worker_server": "src/config/server.php",
+                "gateway_worker": "src/config/gateway.php"
+            }
+        },
+        "branch-alias":{
+            "dev-master":"1.0.x-dev" 
+        } 
+    },
+    "minimum-stability": "stable"
+}
